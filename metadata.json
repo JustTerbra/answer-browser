@@ -1,0 +1,5 @@
+{
+  "name": "Answer Browser",
+  "description": "A sleek, fast, and intelligent personal desktop web browser that provides direct answers using AI, built with React, Tailwind CSS, and the Gemini API.",
+  "requestFramePermissions": []
+}

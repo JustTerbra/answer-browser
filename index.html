@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Answer Browser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#E10600',
+              'primary-active': '#B00400',
+              'primary-glow': 'rgba(225, 6, 0, 0.3)',
+              background: '#0B0B0B',
+              surface: '#141414',
+              'surface-light': '#1F1F1F',
+              glass: 'rgba(20, 20, 20, 0.6)',
+              'text-primary': '#F0F0F0',
+              'text-muted': '#888888',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              'xl': '0.75rem', // 12px
+              '2xl': '1rem',   // 16px
+              '3xl': '1.5rem',  // 24px
+            },
+            boxShadow: {
+              'glow': '0 0 15px 5px rgba(225, 6, 0, 0.2)',
+              'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+              'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1)',
+              'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1)',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s cubic-bezier(0.2, 0.9, 0.2, 1) forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --color-primary: #E10600;
+        --color-primary-active: #B00400;
+        --color-background: #0B0B0B;
+        --color-surface: #141414;
+        --color-text-primary: #F0F0F0;
+        --color-text-muted: #888888;
+      }
+      body {
+        background-color: var(--color-background);
+        font-family: 'Inter', 'sans-serif';
+        color: var(--color-text-primary);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .prose {
+        --tw-prose-body: var(--color-text-primary);
+        --tw-prose-headings: var(--color-text-primary);
+        --tw-prose-lead: #a0a0a0;
+        --tw-prose-links: var(--color-primary);
+        --tw-prose-bold: #FFFFFF;
+        --tw-prose-counters: var(--color-text-muted);
+        --tw-prose-bullets: #555555;
+        --tw-prose-hr: #2a2a2a;
+        --tw-prose-quotes: var(--color-text-primary);
+        --tw-prose-quote-borders: var(--color-primary);
+        --tw-prose-captions: var(--color-text-muted);
+        --tw-prose-code: var(--color-primary);
+        --tw-prose-pre-code: #cccccc;
+        --tw-prose-pre-bg: var(--color-surface);
+        --tw-prose-th-borders: #3a3a3a;
+        --tw-prose-td-borders: #2a2a2a;
+        --tw-prose-invert-body: var(--color-text-primary);
+        --tw-prose-invert-headings: var(--color-text-primary);
+        --tw-prose-invert-lead: #a0a0a0;
+        --tw-prose-invert-links: var(--color-primary);
+        --tw-prose-invert-bold: #FFFFFF;
+        --tw-prose-invert-counters: var(--color-text-muted);
+        --tw-prose-invert-bullets: #555555;
+        --tw-prose-invert-hr: #2a2a2a;
+        --tw-prose-invert-quotes: var(--color-text-primary);
+        --tw-prose-invert-quote-borders: var(--color-primary);
+        --tw-prose-invert-captions: var(--color-text-muted);
+        --tw-prose-invert-code: var(--color-primary);
+        --tw-prose-invert-pre-code: #cccccc;
+        --tw-prose-invert-pre-bg: var(--color-surface);
+        --tw-prose-invert-th-borders: #3a3a3a;
+        --tw-prose-invert-td-borders: #2a2a2a;
+      }
+      .high-contrast {
+          --color-background: #000000;
+          --color-text-primary: #FFFFFF;
+          --color-text-muted: #CCCCCC;
+      }
+      .high-contrast .prose {
+          --tw-prose-body: #FFFFFF;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.3.11",
+    "zustand": "https://aistudiocdn.com/zustand@^4.5.4",
+    "zustand/": "https://aistudiocdn.com/zustand@^4.5.4/",
+    "zustand/middleware": "https://aistudiocdn.com/zustand@^4.5.4/middleware.js",
+    "marked": "https://aistudiocdn.com/marked@^13.0.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
